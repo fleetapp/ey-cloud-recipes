@@ -1,3 +1,6 @@
+require_recipe "delayed_job"
+require_recipe "whenever"
+
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
@@ -20,7 +23,7 @@
 #require_recipe "eybackup_slave"
 
 #uncomment to run the ssmtp recipe
-#require_recipe "ssmtp"
+require_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
 # require_recipe "sunspot"
