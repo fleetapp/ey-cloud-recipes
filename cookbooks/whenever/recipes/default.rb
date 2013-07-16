@@ -17,7 +17,7 @@ if ['solo', 'util'].include?(node[:instance_role])
   execute "whenever" do
     cwd "/data/#{appname}/current"
     user local_user[:username]
-    command "bundle exec whenever --set-environment='#{appname}_#{node[:environment][:framework_env]}' --update-crontab fleetapp"
+    command "bundle exec whenever --set-environment='#{node[:environment][:framework_env]}' --update-crontab fleetapp"
     action :run
   end
   
